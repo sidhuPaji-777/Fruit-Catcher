@@ -54,11 +54,19 @@ class Game{
                     //  console.log(allPlayers.player2.score);
                      players[index -1].x = x;
                      players[index - 1].y = y;
+
                      if(index === player.index){
                      fill("Red");
                      textAlign(CENTER);
                      textSize(20);
                      text(allPlayers[plr].name, players[index-1].x, players[index-1].y+20);
+                     stroke("cyan");
+                strokeWeight(1);
+                textAlign(CENTER);
+                textSize(24);
+                fill("white");
+                text("Player 1: "+allPlayers.player1.score,100,200);
+                text("Player 2: "+allPlayers.player2.score,100,200+30);
                     }
                      //text to display player score.
                     //  if(player1.y==fruits.y)
@@ -98,13 +106,7 @@ class Game{
                  
                  }
 
-                stroke("cyan");
-                strokeWeight(1);
-                textAlign(CENTER);
-                textSize(24);
-                fill("white");
-                text("Player 1: "+player.score,100,200);
-                text("Player 2: "+player.score,100,200+30);
+                
                  
                 //fill code here, to destroy the objects. (Use the one in the class project 39)
                 // add the condition to calculate the score. and use update ti update the values in the database.
